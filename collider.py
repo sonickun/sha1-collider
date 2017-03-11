@@ -89,7 +89,7 @@ def main():
     xref += b'%010d 00000 n \n' % len(prefix1+data)
     data += b'12 0 obj\n<</Length 49>>\nstream\nq\n  %010d 0 0 %010d 0 0 cm\n  /Im0 Do\nQ\nendstream\nendobj\n\n' % (size1[0], size1[1])
 
-    xref_pos = len(prefix1+data)
+    xref_pos = len(prefix1 + data)
     data += xref
     trailer = b'\ntrailer << /Root 9 0 R /Size 13>>\n\nstartxref\n%010d\n%%%%EOF\n' % xref_pos
 
